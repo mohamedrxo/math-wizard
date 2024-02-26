@@ -1,6 +1,11 @@
+#import dependancies tkinter and sympy
+
 import tkinter as tk
+# tkinter is tool that can help use previde simple GUI
 from sympy import sympify,diff,plot,limit,symbols,integrate,expand,oo
+# sympy is function that can help us to calculate the derivative the limits and lot more
 def calculer():
+    # this function will help us to get the value of the function that we want to calclulate the derivative for
     lit.delete(0,10)
     
     a=sympify(b1.get())
@@ -46,9 +51,8 @@ def clear():
 
         
     
-
+#creating that simple GUI with tkinter
 root=tk.Tk()
-root.title("ain toujtat")
 l1=tk.Label(text="function")
 b1=tk.Entry()
 l2=tk.Label(text="limits")
@@ -56,6 +60,7 @@ b2=tk.Entry()
 l3=tk.Label(text="intagral")
 b3=tk.Entry()
 lit=tk.Listbox(width=70)
+# use calculer methode that we wrote in the button
 bt=tk.Button(text="calculer",command=calculer)
 btn=tk.Button(text="clear",command=clear)
 l1.grid(column=0,row=0,columnspan=5)
@@ -68,3 +73,4 @@ bt.grid(column=5,row=3)
 btn.grid(column=4,row=3)
 lit.grid(column=0,row=4,columnspan=10)
 root.mainloop()
+#finishing our awesome project
